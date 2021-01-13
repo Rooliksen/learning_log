@@ -8,11 +8,11 @@
 
 {% block content %}
 
-  <p>Добавить новую запись:</p>
+  <p>Добавление новой записи:</p>
   <form action="{% url 'learning_logs:new_entry' topic.id %}" method='post'>
     {% csrf_token %}
     {{ form.as_p }}
-    <button class="btn btn-primary" name="submit">Добавить запись</button>
+    <button class="btn btn-primary" name="submit">Сохранить</button>
   </form>
 
 {% endblock content %}
